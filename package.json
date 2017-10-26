@@ -11,6 +11,9 @@
     "build": "next build",
     "start": "NODE_ENV=production node src"
   },
+  "engines": {
+    "node" : ">=8.5.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "feathers": "^2.2.3",
