@@ -24,7 +24,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var io = require('socket.io-client');
 
-var socket = io('http://localhost:9001');
+var socket = io();
 
 var app = (0, _client2.default)();
 app.configure((0, _client4.default)(socket)).configure((0, _feathersHooks2.default)()).configure((0, _feathersAuthenticationClient2.default)({
