@@ -1,0 +1,33 @@
+{
+	"port": "PORT",
+	"authentication": {
+		"secret": "cc71e4f97a80c878491197399aabf74e9c0b115c9f8071e75b306c99c891a54b7171852f8c5508e1fe4dcfaedbb603178b0935261928592e487e628f2f669f3a752f2beb3661b29d521b36c8a39e1be6823c0362df5ef1e212d7f2daae789df1065293b98ec9b43309ffe24dba3a2ec2362c5ce5c9155c6438ec380bc7c56d6a169988c0f6754077c5129e8a0ee5fd85b2182d87f84312387e1bbefebe49ad1bf2dcf783e7d8cbee40272b141358b8e23150eee5ea8fc04b2a0f3d824e7fa9d46c025c619c3281af91b7a19fd760bccedae379b735c85024b25a9c91749935b2f29d5b69b2c1ff29368b4aa9cf426d9960302e5e7b903d53e18ccbe2325cf3b6",
+		"strategies": [
+			"jwt"
+		],
+		"path": "/authentication",
+		"service": "users",
+		"jwt": {
+			"header": {
+				"type": "access"
+			},
+			"audience": "HOSTED_URL",
+			"subject": "anonymous",
+			"issuer": "feathers",
+			"algorithm": "HS256",
+			"expiresIn": "1d"
+		},
+		"github": {
+			"clientID": "CLIENT_ID",
+			"clientSecret": "CLIENT_SECRET",
+			"successRedirect": "/",
+			"scope": ["user:email"]
+		},
+		"cookie": {
+			"enabled": true,
+			"name": "feathers-jwt",
+			"httpOnly": false,
+			"secure": false
+		}
+	}
+}
